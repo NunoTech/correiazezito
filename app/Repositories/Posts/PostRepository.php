@@ -25,7 +25,6 @@ class PostRepository extends BaseRepository implements PostRepositoryInterface
     }
     public function store($attributes)
     {
-
         return parent::create($attributes);
     }
 

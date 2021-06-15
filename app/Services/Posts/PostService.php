@@ -37,19 +37,25 @@ class PostService implements PostServiceInterface
         return Cache::remember('postPaginated', 60 * 60, function () use ($paginate) {
             return $this->postRepository->getPaginate($paginate);
         });
+
     }
 
     public function store($attributes)
     {
         $attributes['slug'] = Str::slug($attributes['title']);
-        $postId = $this->postRepository->store($attributes)->id;
+        $post = $this->postRepository->store($attributes);
+
         $attributes = [
-            'post_id' => $postId,
+            'post_id' => $post->id,
             'desktop' => substr($attributes['img'], 1, -1),
             'mobile' => substr($attributes['img'], 1, -1),
             'miniatura' => substr($attributes['img'], 1, -1),
         ];
-       return $this->fileService->save($attributes);
+      $this->fileService->save($attributes);
+       return Cache::forget('postPaginated');
+
+
+
     }
 
 }

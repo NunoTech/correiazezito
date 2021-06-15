@@ -30,8 +30,6 @@ class BlogController extends Controller
 
         $outras = Post::where('id', '!=', $post->id)->orderByDesc('id')->take('4')->with('imgs')->get();
 
-
-
             return view('pages.blog.show',[
                 'post' =>$post,
                 'outras' => $outras
