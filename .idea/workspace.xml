@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e262c284-e617-4b3d-8b2e-01ac9b0ab860" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/BaseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/BaseRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Posts/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Posts/PostRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Posts/PostRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Posts/PostRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Posts/PostService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Posts/PostService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Posts/PostServiceInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Posts/PostServiceInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/posts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/posts/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/posts/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminlte.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +261,7 @@
       <workItem from="1623622272085" duration="15434000" />
       <workItem from="1623655845826" duration="13968000" />
       <workItem from="1623733861985" duration="2009000" />
-      <workItem from="1623793138903" duration="7079000" />
+      <workItem from="1623793138903" duration="10508000" />
     </task>
     <servers />
   </component>
