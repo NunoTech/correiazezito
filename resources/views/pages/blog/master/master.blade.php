@@ -52,8 +52,10 @@
 
 <!-- ======= Hero Section ======= -->
 
+<a href="https://www.correiazezito.com.br/blog">
+    <img src="{{url('assets/blog/img/hero-bg.jpg')}}" width="100%">
 
-<img src="{{url('assets/blog/img/hero-bg.jpg')}}" width="100%">
+</a>
 
 
 <main id="main">
