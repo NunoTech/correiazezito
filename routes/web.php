@@ -25,7 +25,7 @@ Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 
 
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
-
+    Route::get('/', [PostsController::class, 'index'])->name('posts.index');
     Route::get('/posts', [PostsController::class, 'index'])->name('posts.index');
     Route::post('/posts', [PostsController::class, 'store'])->name('posts.store');
     Route::get('/posts/publicar', [PostsController::class, 'create'])->name('posts.create');
