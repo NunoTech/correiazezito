@@ -24,7 +24,9 @@
 @stop
 
 @section('content')
-    <form method="post" action="{{route('posts.store')}}">
+    <form method="post" action="{{route('post.update', $post->slug)}}">
+        @method('put')
+
         @include('pages.admin.posts._partials.form')
         <div class="col-12">
             <button type="submit" class="btn btn-primary btn-block">PUBLICAR</button>

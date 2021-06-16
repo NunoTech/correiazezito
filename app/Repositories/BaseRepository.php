@@ -29,23 +29,26 @@ class BaseRepository
         return $this->model->create($attributes);
     }
 
-    public function getById($id)
+    public function getBySlug($slug)
     {
-        $model = $this->model->find($id);
+
+        $model = $this->model->where('slug', $slug)->first();
+
         if(!$model){
             throw new ModelNotFoundException();
         }
         return $model;
     }
 
-    public function update($attributes, $id)
+    public function update($attributes, $slug)
     {
-        $model = $this->model->find($id);
+
+        $model = $this->model->where('slug', $slug)->first();
 
         if(!$model){
             throw new ModelNotFoundException();
         }
-        $model->update($attributes);
+        $model->update($attributes->all());
         return $model;
     }
 

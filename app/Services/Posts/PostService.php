@@ -29,7 +29,7 @@ class PostService implements PostServiceInterface
 
     public function getBySlug($slug)
     {
-        // TODO: Implement getBySlug() method.
+       return $this->postRepository->getBySlug($slug);
     }
 
     public function getPaginate($paginate = null)
@@ -52,10 +52,17 @@ class PostService implements PostServiceInterface
             'miniatura' => substr($attributes['img'], 1, -1),
         ];
       $this->fileService->save($attributes);
-       return Cache::forget('postPaginated');
-
-
+        return Cache::forget('postPaginated');
 
     }
+
+    public function update($attributes, $slug)
+    {
+        $slug = $this->getBySlug($attributes->slug)->slug;
+        $this->postRepository->update($attributes, $slug);
+        return Cache::forget('postPaginated');
+
+    }
+
 
 }

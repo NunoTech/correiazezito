@@ -30,7 +30,10 @@
             <td>Otto</td>
             <td>
                 <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-warning">Editar</button>
+                    <a href="{{route('post.edit', $post->slug)}}" class="btn btn btn-warning">
+                        Editar
+                    </a>
+
                     <button type="button" class="btn btn-danger">Excluir</button>
 
                 </div>

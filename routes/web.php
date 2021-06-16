@@ -29,6 +29,8 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
     Route::get('/posts', [PostsController::class, 'index'])->name('posts.index');
     Route::post('/posts', [PostsController::class, 'store'])->name('posts.store');
     Route::get('/posts/publicar', [PostsController::class, 'create'])->name('posts.create');
+    Route::get('/posts/editar/{slug}', [PostsController::class, 'edit'])->name('post.edit');
+    Route::put('/posts/editar/{slug}', [PostsController::class, 'update'])->name('post.update');
 
     //Requisicao filepond upload
     Route::post('upload', [UploadsController::class, 'upload']);
