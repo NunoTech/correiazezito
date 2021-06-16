@@ -54,9 +54,9 @@ class PostsController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(PostsRequest $request)
     {
-        $post = $request->all()/*->validated()*/;
+        $post = $request->validated();
 
         try {
             $this->postService->store($post);
@@ -64,7 +64,6 @@ class PostsController extends Controller
         } catch (\Exception $exception) {
 
         }
-
     }
 
     /**
@@ -103,7 +102,7 @@ class PostsController extends Controller
     {
 
         $this->postService->update($request, $slug);
-        return redirect()->back();
+        return redirect()->route('posts.index');
 
     }
 
