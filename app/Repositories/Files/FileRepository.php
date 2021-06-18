@@ -10,7 +10,7 @@ use App\Repositories\BaseRepository;
 
 class FileRepository extends BaseRepository implements FileRepositoryInterface
 {
-    protected $mode;
+    protected $model;
     public function __construct(Img  $model)
     {
         parent::__construct($model);

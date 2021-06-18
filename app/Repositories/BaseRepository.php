@@ -32,7 +32,7 @@ class BaseRepository
     public function getBySlug($slug)
     {
 
-        $model = $this->model->where('slug', $slug)->first();
+        $model = $this->model->with(['imgs', 'movies'])->where('slug', $slug)->first();
 
         if(!$model){
             throw new ModelNotFoundException();
