@@ -34,7 +34,7 @@ class FileService implements FileServiceInterface
     }
     public function save($attributes)
     {
-        $this->fileRepository->save($attributes);
+      return  $this->fileRepository->save($attributes);
     }
 
 
