@@ -17,4 +17,9 @@ class Post extends Model
     {
         return $this->hasMany(Img::class);
     }
+
+    public function movies()
+    {
+        return $this->hasMany(Movie::class);
+    }
 }

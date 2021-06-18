@@ -27,6 +27,7 @@
             <div class="col-12 col-md-9">
                 <div>
                    <h1 class="text-success"> {{ $post->title }}</h1>
+
                     @foreach($post->imgs as $img)
                     <figure class="mt-2">
                         <img width="100%" class="rounded-sm d-none d-sm-none d-md-block d-lg-block d-xl-block" src="{{ url('storage/'.$img->desktop) }}">
@@ -35,8 +36,15 @@
 {{--                        <figcaption>Legenda da imagem"</figcaption>--}}
                     </figure>
                     @endforeach
+
                     <div class="materia">
+
                     {!! $post->text !!}
+                        @foreach($post->movies as $movie)
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe src="https://www.youtube.com/embed/{{$movie->code}}" class="embed-responsive-item" allowfullscreen=""></iframe>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
                 <div id="like_button_container"></div>

@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 
+use App\Services\Movies\MoviesService;
+use App\Services\Movies\MoviesServiceInterface;
 use App\Services\Posts\PostService;
 use App\Services\Posts\PostServiceInterface;
 use App\Services\Files\FileService;
@@ -20,6 +22,7 @@ class ServicesServiceProvider extends ServiceProvider
     {
         $this->app->bind(PostServiceInterface::class, PostService::class);
         $this->app->bind(FileServiceInterface::class, FileService::class);
+        $this->app->bind(MoviesServiceInterface::class, MoviesService::class);
     }
 
     /**

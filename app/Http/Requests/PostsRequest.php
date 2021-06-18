@@ -29,7 +29,8 @@ class PostsRequest extends FormRequest
             'title' => 'required|string|unique:posts',
             'subtitle' => 'required|string',
             'text' => 'required',
-            'img' => 'required'
+            'img' => 'required',
+            'movie' => 'string'
         ];
     }
 
@@ -42,7 +43,8 @@ class PostsRequest extends FormRequest
             'subtitle.required' => 'O subtítulo da matéria é obrigatório',
             'subtitle.string' => 'O subtítulo deve ser um texto',
             'text.required' => 'O texto da matéria é obrigatório',
-            'img.required' => 'Envie uma imagem para matéria e aguarde o carregamento total'
+            'img.required' => 'Envie uma imagem para matéria e aguarde o carregamento total',
+            'movie.string' => 'Link inválido'
         ];
     }
 }

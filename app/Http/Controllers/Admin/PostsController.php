@@ -57,7 +57,6 @@ class PostsController extends Controller
     public function store(PostsRequest $request)
     {
         $post = $request->validated();
-
         try {
             $this->postService->store($post);
             return redirect()->back();

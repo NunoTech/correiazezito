@@ -25,10 +25,16 @@
 
 @section('content')
     <form method="post" action="{{route('posts.store')}}">
-        @include('pages.admin.posts._partials.form')
-        <div class="col-12">
-            <button type="submit" class="btn btn-primary btn-block">PUBLICAR</button>
+        <div class="row">
+              <span class="col-12 mr-0">
+                    <button type="submit" class="btn btn-success float-right">PUBLICAR</button>
+                </span>
         </div>
+
+
+        @include('pages.admin.posts._partials.form')
+
+
     </form>
 
 
@@ -62,6 +68,29 @@
                 }
             },
         });
+    </script>
+
+    <script>
+        let btn = document.querySelector("#btnVerifyMovie");
+
+        btn.addEventListener('click', (event) => {
+            event.preventDefault();
+            let divFrame = document.querySelector('#frameMovie')
+            divFrame.removeAttribute('hidden')
+            let inputMovie = document.querySelector("#movie").value
+            let codeMovie = inputMovie.replace('https://youtu.be/', '')
+
+            let frame = document.createElement('iframe')
+            frame.setAttribute('src', 'https://www.youtube.com/embed/' + codeMovie)
+            frame.classList.add('embed-responsive-item')
+            frame.setAttribute('allowfullscreen', '')
+
+            divFrame.append(frame)
+            console.log(divFrame);
+
+            {{--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{$movie->link}}"--}}
+            {{--        allowfullscreen></iframe>--}}
+        })
     </script>
 @stop
 

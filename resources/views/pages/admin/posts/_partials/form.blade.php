@@ -30,7 +30,8 @@
 <div class="form-row">
     <div class="form-group col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
         <label for="inputAddress2">Texto</label>
-        <textarea name="text" id="text" rows="10" class="@error('text') is-invalid @enderror" >{{$post->text ?? old('text')}}</textarea>
+        <textarea name="text" id="text" rows="10"
+                  class="@error('text') is-invalid @enderror">{{$post->text ?? old('text')}}</textarea>
         @error('text')
         <div class="invalid-feedback">
             {{$message}}
@@ -48,14 +49,21 @@
                 </div>
                 @enderror
             </div>
-            <div class="col-12 mb-3">
+            <div class="col-9 mb-3">
                 <label for="movie">Vídeo</label>
                 <input type="text" name="movie" class="form-control" id="movie"
-                       placeholder="EX: https://www.youtube.com/watch?v=RSKn1wR09rg" value="{{old('movie')}}">
+                       placeholder="EX: https://youtu.be/hiID45XxMMQ" value="{{old('movie')}}">
+            </div>
+            <div class="col-3 mb-3">
+                <label for="verify">Consultar video</label>
+                <button type="button" class="btn btn-info btn-block" id="btnVerifyMovie">
+                    >>
+                </button>
+            </div>
+            <div class="embed-responsive embed-responsive-16by9" id="frameMovie" hidden>
+
             </div>
 
         </div>
     </div>
-
-
 </div>

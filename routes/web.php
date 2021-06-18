@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Admin\UploadsController;
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -19,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'SiteController@index')->name('home.site');
 
 Route::get('/blog', 'BlogController@index')->name('home.blog');
-Route::get('/blog/{post}', 'BlogController@show')->name('show.blog');
+Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('show.blog');
 Route::post('/mail', 'SiteController@mail')->name('send.email');
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 
