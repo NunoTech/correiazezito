@@ -52,7 +52,7 @@
             <div class="col-9 mb-3">
                 <label for="movie">Vídeo</label>
                 <input type="text" name="movie" class="form-control" id="movie"
-                       placeholder="EX: https://www.youtube.com/watch?v=RSKn1wR09rg" value="{{old('movie')}}">
+                       placeholder="EX: https://youtu.be/hiID45XxMMQ" value="{{old('movie')}}">
             </div>
             <div class="col-3 mb-3">
                 <label for="verify">Consultar video</label>
