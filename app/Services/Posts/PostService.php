@@ -17,6 +17,7 @@ class PostService implements PostServiceInterface
     protected $postRepository;
     protected $fileService;
     protected $movieService;
+
     public function __construct(PostRepositoryInterface $postRepository, FileServiceInterface $fileService, MoviesService $moviesService)
     {
         $this->postRepository = $postRepository;
@@ -36,9 +37,8 @@ class PostService implements PostServiceInterface
 
     public function getPaginate($paginate = null)
     {
-        return Cache::remember('postPaginated', 60 * 60, function () use ($paginate) {
-            return $this->postRepository->getPaginate($paginate);
-        });
+
+        return $this->postRepository->getPaginate($paginate);
 
     }
 
@@ -65,7 +65,7 @@ class PostService implements PostServiceInterface
                 'code' => $code
             ];
 
-           $this->movieService->create($movie);
+            $this->movieService->create($movie);
         }
 
         return Cache::forget('postPaginated');
