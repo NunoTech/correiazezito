@@ -30,7 +30,6 @@ class PostsRequest extends FormRequest
             'subtitle' => 'required|string',
             'text' => 'required',
             'img' => 'required',
-            'movie' => 'string'
         ];
     }
 
