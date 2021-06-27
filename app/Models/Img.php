@@ -2,14 +2,15 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Img extends Model
 {
-    use SoftDeletes;
+    use SoftDeletes, HasFactory;
 
-    protected $fillable = ['desktop', 'mobile', 'miniatura', 'post_id'];
+    protected $fillable = ['path', 'post_id'];
 
     public function post()
     {

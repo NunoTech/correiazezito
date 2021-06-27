@@ -34,6 +34,7 @@
     "/assets/auth/js/main.js": "/assets/auth/js/main.js",
     "/assets/auth/images/img-01.png": "/assets/auth/images/img-01.png",
     "/assets/painel/js/filepond.js": "/assets/painel/js/filepond.js",
+    "/assets/painel/js/filepond-plugin-image-resize.js": "/assets/painel/js/filepond-plugin-image-resize.js",
     "/assets/painel/js/filepond-plugin-image-preview.js": "/assets/painel/js/filepond-plugin-image-preview.js",
     "/assets/painel/js/ckeditor.js": "/assets/painel/js/ckeditor.js",
     "/assets/painel/css/filepond.css": "/assets/painel/css/filepond.css",

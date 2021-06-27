@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 
+use App\Services\Caches\CacheService;
+use App\Services\Caches\CacheServiceInterface;
 use App\Services\Movies\MoviesService;
 use App\Services\Movies\MoviesServiceInterface;
 use App\Services\Posts\PostService;
@@ -23,6 +25,7 @@ class ServicesServiceProvider extends ServiceProvider
         $this->app->bind(PostServiceInterface::class, PostService::class);
         $this->app->bind(FileServiceInterface::class, FileService::class);
         $this->app->bind(MoviesServiceInterface::class, MoviesService::class);
+        $this->app->bind(CacheServiceInterface::class, CacheService::class);
     }
 
     /**

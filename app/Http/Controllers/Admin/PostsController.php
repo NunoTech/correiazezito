@@ -53,16 +53,21 @@ class PostsController extends Controller
         }
     }
 
-
+    /**
+     * @param PostsRequest $request
+     * @return \Exception|\Illuminate\Http\RedirectResponse
+     *
+     */
     public function store(PostsRequest $request)
     {
         $post = $request->validated();
         try {
             $this->postService->store($post);
-            return redirect()->back();
-        } catch (\Exception $exception) {
 
+        } catch (\Exception $exception) {
+            return $exception;
         }
+        return redirect()->back();
     }
 
     /**

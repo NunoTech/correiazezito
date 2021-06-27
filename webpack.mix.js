@@ -102,6 +102,8 @@ mix
 
     //painel - admin
     .scripts('node_modules/filepond/dist/filepond.js', 'public/assets/painel/js/filepond.js')
+    .scripts('node_modules/filepond/dist/filepond.js', 'public/assets/painel/js/filepond.js')
+    .scripts('node_modules/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js', 'public/assets/painel/js/filepond-plugin-image-resize.js')
 
     .scripts('node_modules/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js', 'public/assets/painel/js/filepond-plugin-image-preview.js')
     .scripts('node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js', 'public/assets/painel/js/ckeditor.js')

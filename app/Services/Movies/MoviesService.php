@@ -5,6 +5,7 @@ namespace App\Services\Movies;
 
 
 use App\Repositories\Movies\MovieRepositoryInterface;
+use Illuminate\Support\Str;
 
 class MoviesService implements MoviesServiceInterface
 {
@@ -15,8 +16,17 @@ class MoviesService implements MoviesServiceInterface
         $this->movieRepository = $movieRepository;
     }
 
-    public function create($attributes)
+    public function save($post)
     {
-        $this->movieRepository->save($attributes);
+        $movie = [
+            'post_id' => $post->id,
+            'code' => $this->replaceMovie($post['movie'])
+        ];
+        return $this->movieRepository->save($movie);
+    }
+
+    private function replaceMovie(string $movie): string
+    {
+        return Str::replace('https://youtu.be/', '', $movie);
     }
 }

@@ -2,8 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\Img;
 use App\Models\Post;
+use Database\Factories\ImgFactory;
 use Illuminate\Database\Seeder;
+
 
 class PostsTableSeeder extends Seeder
 {
@@ -14,6 +17,10 @@ class PostsTableSeeder extends Seeder
      */
     public function run()
     {
-        Post::factory()->count(20)->create();
+
+        Post::factory()
+            ->count(20)
+            ->has(Img::factory())
+            ->create();
     }
 }

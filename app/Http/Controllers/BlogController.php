@@ -8,16 +8,17 @@ use App\Services\Posts\PostServiceInterface;
 
 class BlogController extends Controller
 {
-    private $blogService;
+    private $postService;
 
-    public function __construct(PostServiceInterface $blogService)
+    public function __construct(PostServiceInterface $postService)
     {
-        $this->blogService = $blogService;
+        $this->postService = $postService;
     }
 
     public function index()
     {
-        $posts = $this->blogService->getPaginate(12);
+        $posts = $this->postService->getPaginate(12);
+
 
         return view('pages.blog.index', [
             'posts' => $posts
@@ -26,7 +27,7 @@ class BlogController extends Controller
 
     public function show($slug)
     {
-        $post = $this->blogService->getBySlug($slug);
+        $post = $this->postService->getBySlug($slug);
 
         return view('pages.blog.show', [
             'post' => $post,

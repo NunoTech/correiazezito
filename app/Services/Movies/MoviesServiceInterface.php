@@ -6,7 +6,7 @@ namespace App\Services\Movies;
 
 interface MoviesServiceInterface
 {
-    public function create($attributes);
+    public function save($post);
 
 
 }

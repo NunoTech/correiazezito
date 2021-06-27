@@ -6,13 +6,14 @@ namespace App\Services\Files;
 
 use App\Repositories\Files\FileRepositoryInterface;
 use Illuminate\Support\Facades\Storage;
-
+use Intervention\Image\Facades\Image;
 
 
 class FileService implements FileServiceInterface
 {
 
     protected $fileRepository;
+
     public function __construct(FileRepositoryInterface $fileRepository)
     {
         $this->fileRepository = $fileRepository;
@@ -28,13 +29,15 @@ class FileService implements FileServiceInterface
         return response()->json($path);
     }
 
-    public function move($attributes)
+
+    public function save($postId, $imgPathTemp)
     {
-        Storage::copy('app/public/' . $attributes['img'], 'app/public/teste' . uniqid() . '-' . now()->timestamp .'jpg');
-    }
-    public function save($attributes)
-    {
-      return  $this->fileRepository->save($attributes);
+        $file = [
+            'post_id' => $postId,
+            'path' => substr($imgPathTemp, 1, -1),
+        ];
+        $this->fileRepository->save($file);
+        return $this;
     }
 
 

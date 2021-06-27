@@ -6,5 +6,5 @@ namespace App\Repositories\Files;
 
 interface FileRepositoryInterface
 {
-    public function create($attributes);
+    public function save($file);
 }
