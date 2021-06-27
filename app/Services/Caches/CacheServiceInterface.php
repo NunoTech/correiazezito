@@ -12,5 +12,6 @@ interface CacheServiceInterface
      *
      */
     public function removeCachePerSlug(string $slug);
+    public function removeCachePaginate();
 
 }

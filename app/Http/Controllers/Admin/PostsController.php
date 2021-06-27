@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\PostsRequest;
+use App\Http\Requests\PostsStoreRequest;
+use App\Http\Requests\PostUpdateRequest;
 use App\Models\Post;
 use App\Services\Posts\PostServiceInterface;
 use Illuminate\Http\Request;
@@ -35,8 +36,6 @@ class PostsController extends Controller
         } catch (\Exception $exception) {
 
         }
-
-
     }
 
     /**
@@ -54,11 +53,11 @@ class PostsController extends Controller
     }
 
     /**
-     * @param PostsRequest $request
+     * @param PostsStoreRequest $request
      * @return \Exception|\Illuminate\Http\RedirectResponse
      *
      */
-    public function store(PostsRequest $request)
+    public function store(PostsStoreRequest $request)
     {
         $post = $request->validated();
         try {
@@ -100,14 +99,12 @@ class PostsController extends Controller
      *
      * @param \Illuminate\Http\Request $request
      * @param int $id
-     * @return Response
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(Request $request, $slug)
+    public function update(PostUpdateRequest $request, $slug)
     {
-
         $this->postService->update($request, $slug);
         return redirect()->route('posts.index');
-
     }
 
     /**

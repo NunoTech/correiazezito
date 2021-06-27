@@ -27,7 +27,7 @@ class PostService implements PostServiceInterface
                                 MoviesServiceInterface $moviesService,
                                 CacheServiceInterface $cacheService
 
-                    )
+    )
     {
         $this->postRepository = $postRepository;
         $this->fileService = $fileService;
@@ -35,34 +35,35 @@ class PostService implements PostServiceInterface
         $this->cacheService = $cacheService;
     }
 
-    public function get()
-    {
-        // TODO: Implement get() method.
-    }
-
     public function getBySlug($slug)
     {
-        $postCached = Cache::remember('post' . $slug . 'CachedKey', 60 * 60, function () use ($slug) {
+        $postCache = Cache::remember('post' . $slug . 'CachedKey', 60 * 60, function () use ($slug) {
             return $this->postRepository->getBySlug($slug);
         });
-        return $postCached;
+        return $postCache;
 
     }
 
     public function getPaginate($paginate = null)
     {
-        return $this->postRepository->getPaginate($paginate);
+        $postsPageCache = Cache::remember('pagedCache', 60 * 60, function () use ($paginate) {
+            return $this->postRepository->getPaginate($paginate);
+        });
+        return  $postsPageCache;
+
     }
 
     public function store($attributes)
     {
+
         $attributes['slug'] = Str::slug($attributes['title']);
 
         $post = $this->postRepository->store($attributes);
         $this->fileService->save($post->id, $attributes['img']);
-        if ($attributes['movie'])
+        if (isset($attributes['movie']))
             $this->movieService->save($post);
 
+        $this->cacheService->removeCachePaginate();
         return $this;
     }
 
@@ -70,7 +71,8 @@ class PostService implements PostServiceInterface
     {
         $slug = $this->getBySlug($attributes->slug)->slug;
         $this->postRepository->update($attributes, $slug);
-        return Cache::forget('postPaginated');
+        $this->cacheService->removeCachePerSlug($slug);
+        return $this;
 
     }
 

@@ -14,6 +14,7 @@ class ImgTableSeeder extends Seeder
      */
     public function run()
     {
+        Img::factory()->count('20')->create();
 
     }
 }

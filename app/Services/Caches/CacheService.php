@@ -16,6 +16,14 @@ class CacheService implements CacheServiceInterface
     public function removeCachePerSlug(string $slug)
     {
         Cache::forget('post'.$slug.'CachedKey');
+        $this->removeCachePaginate();
+        return $this;
+    }
+
+    public function removeCachePaginate()
+    {
+        Cache::forget('pagedCache');
+        return $this;
     }
 
 }

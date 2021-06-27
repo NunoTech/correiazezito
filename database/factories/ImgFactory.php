@@ -5,6 +5,7 @@ namespace Database\Factories;
 use App\Models\Img;
 use App\Models\Post;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class ImgFactory extends Factory
 {
@@ -23,16 +24,13 @@ class ImgFactory extends Factory
     public function definition()
     {
         $folder = uniqid() . '-' . now()->timestamp;
-        $path = storage_path('app/publifile/'. $folder .'/');
+        mkdir(storage_path('app/public/file/'. $folder),0777,true);
 
-        dd($this->faker->image($path,'600','480'));
+        $pathFile = $this->faker->image(storage_path('app/public/file/'. $folder),'600','480','cats', 'false', true);
 
-        $path = $this->faker->image(storage_path('file/'. $folder .'/'), 640, 480, 'cats', false);
         return [
-            'desktop' => $path,
-            'mobile' => $path,
-            'miniatura' => $path,
-            'post_id' => Post::factory()->create()->id,
+            'path' =>Str::after($pathFile, 'storage/app/public/'),
+//            'post_id' => Post::factory()->create()->id,
         ];
     }
 }

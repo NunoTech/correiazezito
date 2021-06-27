@@ -26,10 +26,11 @@
                 <div class="iconbox-blue bg-light">
                     @foreach($postagem->imgs as $img)
 
+
                     <img width="100%" class="rounded-top d-none d-sm-none d-md-block d-lg-block d-xl-block"
-                         src="{{ url('storage/'.$img->desktop) }}">
+                         src="{{ url('storage/'.$img->path) }}">
                     <img width="100%" class=" rounded-top d-block d-sm-block d-md-none d-lg-none d-xl-none"
-                         src="{{ url('storage/'.$img->mobile) }}">
+                         src="{{ url('storage/'.$img->path) }}">
 
                     @endforeach
 
