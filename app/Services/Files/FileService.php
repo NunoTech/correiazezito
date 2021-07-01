@@ -30,7 +30,7 @@ class FileService implements FileServiceInterface
         $folder = uniqid() . '-' . now()->timestamp;
 
         $path = $file->storeAs('file/' . $folder, Str::slug($fileName) . '.' . $this->validateFileExtension($file));
-        $image = Image::make($request->file('img'))->fit(600, 480)->encode('jpg', 80);
+        $image = Image::make($request->file('img'))->fit(300, 240)->encode('jpg', 80);
         $image->save(storage_path('app/public/' . $path));
         return response()->json($path);
     }
