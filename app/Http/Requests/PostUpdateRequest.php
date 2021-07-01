@@ -14,7 +14,7 @@ class PostUpdateRequest extends FormRequest
      */
     public function authorize()
     {
-        if(Auth::check()) return true;
+        if (Auth::check()) return true;
         return false;
     }
 
@@ -25,10 +25,14 @@ class PostUpdateRequest extends FormRequest
      */
     public function rules()
     {
+
         return [
-            'title' => 'required|string|unique:posts',
+            'title' => 'required|string',
             'subtitle' => 'required|string',
             'text' => 'required',
+            'img' => 'nullable|string',
+            'movie' => 'nullable|string'
+
         ];
     }
 

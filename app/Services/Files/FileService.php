@@ -47,6 +47,16 @@ class FileService implements FileServiceInterface
     }
 
     /**
+     * @param $id
+     * @return mixed
+     *
+     */
+    public function delete($id)
+    {
+        return $this->fileRepository->delete($id);
+    }
+
+    /**
      * @param $file
      * @return string
      *
@@ -63,6 +73,5 @@ class FileService implements FileServiceInterface
 
         if (in_array($fileExtension, $fileExtensionAllowed))
             return $fileExtension;
-
     }
 }

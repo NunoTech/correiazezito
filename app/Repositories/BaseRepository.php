@@ -40,15 +40,24 @@ class BaseRepository
         return $model;
     }
 
-    public function update($attributes, $slug)
+    public function getById($id)
     {
-
-        $model = $this->model->where('slug', $slug)->first();
+        $model = $this->model->find($id);
 
         if(!$model){
             throw new ModelNotFoundException();
         }
-        $model->update($attributes->all());
+        return $model;
+    }
+
+    public function update($attributes, $id)
+    {
+        $model = $this->model->find($id);
+
+        if(!$model){
+            throw new ModelNotFoundException();
+        }
+        $model->update($attributes);
         return $model;
     }
 
@@ -64,8 +73,18 @@ class BaseRepository
 
     public function paginate($paginate = null)
     {
+
        return $this->model->with('imgs')->orderByDesc('id')->paginate($paginate);
     }
 
+    public function updateOrCreate($attributes){
+        $model = $this->model->where('slug', $attributes->slug)->first();
+
+        if(!$model){
+            throw new ModelNotFoundException();
+        }
+        $model->updateOrCreate($attributes->all());
+        return $model;
+    }
 
 }

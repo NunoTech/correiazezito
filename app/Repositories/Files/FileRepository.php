@@ -21,4 +21,9 @@ class FileRepository extends BaseRepository implements FileRepositoryInterface
     {
         return parent::create($file);
     }
+
+    public function delete($fileId)
+    {
+       return parent::destroy($fileId);
+    }
 }

@@ -18,9 +18,8 @@ class PostsTableSeeder extends Seeder
      */
     public function run()
     {
-
         Post::factory()
-            ->count(20)
+            ->count(1)
             ->has(Img::factory())
             ->has(Movie::factory())
             ->create();

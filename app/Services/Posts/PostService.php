@@ -37,43 +37,56 @@ class PostService implements PostServiceInterface
 
     public function getBySlug($slug)
     {
-        $postCache = Cache::remember('post' . $slug . 'CachedKey', 60 * 60, function () use ($slug) {
+        return Cache::remember('post' . $slug . 'CachedKey', 60 * 60, function () use ($slug) {
             return $this->postRepository->getBySlug($slug);
         });
-        return $postCache;
 
     }
 
     public function getPaginate($paginate = null)
     {
-        $postsPageCache = Cache::remember('pagedCache', 60 * 60, function () use ($paginate) {
+
+        return Cache::remember('pagedCache', 60 * 60, function () use ($paginate) {
             return $this->postRepository->getPaginate($paginate);
         });
-        return  $postsPageCache;
 
     }
 
     public function store($attributes)
     {
-
         $attributes['slug'] = Str::slug($attributes['title']);
-
         $post = $this->postRepository->store($attributes);
         $this->fileService->save($post->id, $attributes['img']);
-        if (isset($attributes['movie']))
-            $this->movieService->save($post);
 
-        $this->cacheService->removeCachePaginate();
-        return $this;
+        if (!is_null($attributes['movie'])) {
+             $this->movieService->save($post->id, $attributes['movie']);
+        }
+
+       return $this->cacheService->removeCachePaginate();
     }
 
-    public function update($attributes, $slug)
+    public function update($post, $slug)
     {
-        $slug = $this->getBySlug($attributes->slug)->slug;
-        $this->postRepository->update($attributes, $slug);
-        $this->cacheService->removeCachePerSlug($slug);
-        return $this;
+        $getPostForUpdate = $this->getBySlug($slug);
+        $this->postRepository->update($post, $getPostForUpdate->id);
 
+        if (is_null($post['img']) and is_null($post['movie']))
+            return $this->cacheService->removeCachePerSlug($slug);
+
+        if (!is_null($post['movie'])) {
+            collect($getPostForUpdate->movies)->map(function ($movie){
+                return $this->movieService->delete($movie->id);
+            });
+                $this->movieService->save($getPostForUpdate->id, $post['movie']);
+        }
+
+        if (!is_null($post['img'])) {
+            collect($getPostForUpdate->imgs)->map(function ($img){
+                return $this->fileService->delete($img->id);
+            });
+            $this->fileService->save($getPostForUpdate->id, $post['img']);
+        }
+
+        return $this->cacheService->removeCachePerSlug($slug);
     }
-
 }

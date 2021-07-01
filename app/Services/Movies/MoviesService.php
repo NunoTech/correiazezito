@@ -16,11 +16,11 @@ class MoviesService implements MoviesServiceInterface
         $this->movieRepository = $movieRepository;
     }
 
-    public function save($post)
+    public function save($postId, $code)
     {
         $movie = [
-            'post_id' => $post->id,
-            'code' => $this->replaceMovie($post['movie'])
+            'post_id' => $postId,
+            'code' => $this->replaceMovie($code)
         ];
         return $this->movieRepository->save($movie);
     }
@@ -28,5 +28,20 @@ class MoviesService implements MoviesServiceInterface
     private function replaceMovie(string $movie): string
     {
         return Str::replace('https://youtu.be/', '', $movie);
+    }
+
+    public function updateOrCreate($attributes)
+    {
+
+    }
+
+    public function getById($movieId)
+    {
+
+    }
+
+    public function delete($movieId)
+    {
+        return $this->movieRepository->delete($movieId);
     }
 }

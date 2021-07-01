@@ -29,7 +29,9 @@ class PostsController extends Controller
     public function index()
     {
         try {
+
             $posts = $this->postService->getPaginate(15);
+
             return view('pages.admin.posts.index', [
                 'posts' => $posts
             ]);
@@ -103,7 +105,8 @@ class PostsController extends Controller
      */
     public function update(PostUpdateRequest $request, $slug)
     {
-        $this->postService->update($request, $slug);
+        $post = $request->validated();
+        $this->postService->update($post, $slug);
         return redirect()->route('posts.index');
     }
 

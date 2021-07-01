@@ -30,6 +30,7 @@ class PostsStoreRequest extends FormRequest
             'subtitle' => 'required|string',
             'text' => 'required',
             'img' => 'required',
+            'movie' => 'nullable|string'
         ];
     }
 
