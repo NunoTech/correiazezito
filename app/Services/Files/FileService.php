@@ -40,7 +40,7 @@ class FileService implements FileServiceInterface
     {
         $file = [
             'post_id' => $postId,
-            'path' => substr($imgPathTemp, 1, -1),
+            'path' => Str::replace('\/', '/',substr($imgPathTemp, 1, -1)),
         ];
         $this->fileRepository->save($file);
         return $this;
