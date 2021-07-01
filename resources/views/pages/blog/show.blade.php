@@ -19,8 +19,8 @@
     <meta property="og:image:type" content="image/jpg">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:alt" content="{{ $post->title }}"/>
-    <meta property="og:image:width" content="652"/>
-    <meta property="og:image:height" content="408"/>
+    <meta property="og:image:width" content="600"/>
+    <meta property="og:image:height" content="450"/>
 @endsection
 @section('content')
     <section class="title container" id="materia">

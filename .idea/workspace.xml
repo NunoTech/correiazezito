@@ -3,27 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e262c284-e617-4b3d-8b2e-01ac9b0ab860" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PostUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PostUpdateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PostsStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PostsStoreRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/BaseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/BaseRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Files/FileRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Files/FileRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Files/FileRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Files/FileRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Movies/MovieRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Movies/MovieRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Movies/MovieRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Movies/MovieRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Posts/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Posts/PostRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Posts/PostRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Posts/PostRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Files/FileService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Files/FileService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Files/FileServiceInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Files/FileServiceInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Movies/MoviesService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Movies/MoviesService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Movies/MoviesServiceInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Movies/MoviesServiceInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Posts/PostService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Posts/PostService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Posts/PostServiceInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Posts/PostServiceInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/PostFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/PostFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/PostsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PostsTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/posts/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/posts/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/blog/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/blog/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/site/_partials/services.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/site/_partials/services.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/49/56/4956b1111162b3b8e24ecdc925cf55045b2cd8f0" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/49/56/4956b1111162b3b8e24ecdc925cf55045b2cd8f0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/a7/35/a7352364bd9ceb33dcc0c2b2a95bedf7da3e76bb" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/a7/35/a7352364bd9ceb33dcc0c2b2a95bedf7da3e76bb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,7 +284,7 @@
       <workItem from="1624741468053" duration="43319000" />
       <workItem from="1624926199439" duration="8582000" />
       <workItem from="1625065194774" duration="5588000" />
-      <workItem from="1625100807221" duration="6171000" />
+      <workItem from="1625100807221" duration="12609000" />
     </task>
     <servers />
   </component>
