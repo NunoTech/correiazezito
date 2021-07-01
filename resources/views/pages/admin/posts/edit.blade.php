@@ -17,7 +17,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Admin</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Publicar</li>
+            <li class="breadcrumb-item active" aria-current="page">Editar</li>
         </ol>
     </nav>
 
@@ -25,12 +25,15 @@
 
 @section('content')
     <form method="post" action="{{route('post.update', $post->slug)}}">
+        <div class="row">
+              <span class="col-12 mr-0">
+                    <button type="submit" class="btn btn-success float-right">EDITAR</button>
+                </span>
+        </div>
         @method('put')
 
         @include('pages.admin.posts._partials.form')
-        <div class="col-12">
-            <button type="submit" class="btn btn-primary btn-block">PUBLICAR</button>
-        </div>
+
     </form>
 
 
