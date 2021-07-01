@@ -30,11 +30,7 @@
                     <button type="submit" class="btn btn-success float-right">PUBLICAR</button>
                 </span>
         </div>
-
-
         @include('pages.admin.posts._partials.form')
-
-
     </form>
 
 
@@ -43,7 +39,10 @@
 @section('js')
     <script src="{{asset('assets/painel/js/filepond.js')}}"></script>
     <script src="{{asset('assets/painel/js/filepond-plugin-image-preview.js')}}"></script>
+    <script src="{{asset('assets/painel/js/filepond-plugin-image-resize.js')}}"></script>
     <script src="{{asset('assets/painel/js/ckeditor.js')}}"></script>
+
+
 
     <script>
         ClassicEditor.create(document.querySelector('#text'))
@@ -55,6 +54,8 @@
             });
 
         FilePond.registerPlugin(FilePondPluginImagePreview);
+        FilePond.registerPlugin(FilePondPluginImageResize);
+
         // Get a reference to the file input element
         const inputElement = document.querySelector('input[type="file"]');
         // Create a FilePond instance
@@ -67,7 +68,10 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             },
+
         });
+
+        console.log(pond);
     </script>
 
     <script>

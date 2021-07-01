@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Post;
+use App\Services\Caches\CacheService;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -22,11 +23,13 @@ class PostFactory extends Factory
      */
     public function definition()
     {
+        
         $title = $this->faker->sentence(10,true);
+        $slug = Str::slug($title);
         return [
-            'title' => $this->faker->sentence(10),
+            'title' => $title,
             'subtitle' => $this->faker->sentence(10,true),
-            'slug' => Str::slug($title),
+            'slug' => $slug,
             'text' => $this->faker->paragraph(3,true),
         ];
     }

@@ -11,8 +11,9 @@
     <meta property="og:site_name" content="O Protagonista"/>
     <meta property="og:description" content="{{ $post->subtittle }}"/>
     @if(count($post->imgs) > 0)
+
     <meta property="og:image"
-          content="https://www.correiazezito.com.br/storage/{{$post->imgs[0]->miniatura}}"/>
+          content="https://www.correiazezito.com.br/storage/{{$post->imgs[0]->path}}"/>
     @endif
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:type" content="image/jpg">
@@ -30,8 +31,8 @@
 
                     @foreach($post->imgs as $img)
                     <figure class="mt-2">
-                        <img width="100%" class="rounded-sm d-none d-sm-none d-md-block d-lg-block d-xl-block" src="{{ url('storage/'.$img->desktop) }}">
-                        <img width="100%" class="rounded-sm d-block d-sm-block d-md-none d-lg-none d-xl-none" src="{{ url('storage/'.$img->mobile) }}">
+                        <img width="100%" class="rounded-sm d-none d-sm-none d-md-block d-lg-block d-xl-block" src="{{ url('storage/'.$img->path) }}">
+                        <img width="100%" class="rounded-sm d-block d-sm-block d-md-none d-lg-none d-xl-none" src="{{ url('storage/'.$img->path) }}">
 
 {{--                        <figcaption>Legenda da imagem"</figcaption>--}}
                     </figure>

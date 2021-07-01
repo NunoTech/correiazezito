@@ -3,8 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="e262c284-e617-4b3d-8b2e-01ac9b0ab860" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PostsRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PostsRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PostUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PostUpdateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PostsStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PostsStoreRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/BaseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/BaseRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Files/FileRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Files/FileRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Files/FileRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Files/FileRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Movies/MovieRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Movies/MovieRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Movies/MovieRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Movies/MovieRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Posts/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Posts/PostRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Posts/PostRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Posts/PostRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Files/FileService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Files/FileService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Files/FileServiceInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Files/FileServiceInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Movies/MoviesService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Movies/MoviesService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Movies/MoviesServiceInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Movies/MoviesServiceInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/Posts/PostService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Posts/PostService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Posts/PostServiceInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Posts/PostServiceInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/PostFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/PostFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/PostsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PostsTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +54,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/.env" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/Services/Posts/PostService.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/Http/Requests/PostsStoreRequest.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/PostsController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -165,6 +188,11 @@
       <path value="$PROJECT_DIR$/vendor/laravel/sail" />
       <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/vendor/predis/predis" />
+      <path value="$PROJECT_DIR$/vendor/intervention/imagecache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
     </include_path>
   </component>
   <component name="ProjectId" id="1mMIAMLUE8hLA9lsaMU03o4xCBF" />
@@ -178,7 +206,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Services/Posts" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -192,11 +220,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\nuno\correiazezito\app\Services\Posts" />
       <recent name="\\wsl$\Ubuntu\home\nuno\correiazezito\resources\views\pages\admin\posts" />
       <recent name="\\wsl$\Ubuntu\home\nuno\correiazezito" />
       <recent name="\\wsl$\Ubuntu-20.04\home\nuno\correia\resources\views\pages\admin\posts" />
       <recent name="\\wsl$\Ubuntu-20.04\home\nuno\correia\app\Services\Posts" />
-      <recent name="\\wsl$\Ubuntu-20.04\home\nuno\correia" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Nuno Franca\Documents\projetos\correia\app" />
@@ -263,7 +291,14 @@
       <workItem from="1623655845826" duration="13968000" />
       <workItem from="1623733861985" duration="2009000" />
       <workItem from="1623793138903" duration="12811000" />
-      <workItem from="1624366863588" duration="908000" />
+      <workItem from="1624366863588" duration="2814000" />
+      <workItem from="1624436539093" duration="56000" />
+      <workItem from="1624446004247" duration="14000" />
+      <workItem from="1624720725346" duration="13281000" />
+      <workItem from="1624741468053" duration="43319000" />
+      <workItem from="1624926199439" duration="8582000" />
+      <workItem from="1625065194774" duration="5588000" />
+      <workItem from="1625100807221" duration="6171000" />
     </task>
     <servers />
   </component>

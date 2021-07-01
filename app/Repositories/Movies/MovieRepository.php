@@ -19,9 +19,25 @@ class MovieRepository extends BaseRepository implements MovieRepositoryInterface
         $this->model = $model;
     }
 
+    public function getById($movieId)
+    {
+        parent::getById($movieId);
+    }
+
     public function save($attributes)
     {
-     return parent::create($attributes);
+        return parent::create($attributes);
+    }
+
+    public function updateOrCreate($attributes)
+    {
+
+    }
+
+    public function delete($movieId)
+    {
+
+        return parent::destroy($movieId);
     }
 
 

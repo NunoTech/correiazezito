@@ -28,6 +28,7 @@
         "bootstrap-icons": "^1.2.2",
         "decamelize": "^5.0.0",
         "filepond": "^4.28.2",
-        "filepond-plugin-image-preview": "^4.6.6"
+        "filepond-plugin-image-preview": "^4.6.6",
+        "filepond-plugin-image-resize": "^2.0.10"
     }
 }

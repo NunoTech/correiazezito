@@ -8,31 +8,46 @@ use App\Services\Posts\PostServiceInterface;
 
 class BlogController extends Controller
 {
-    private $blogService;
+    private $postService;
 
-    public function __construct(PostServiceInterface $blogService)
+
+    public function __construct(PostServiceInterface $postService)
     {
-        $this->blogService = $blogService;
+        $this->postService = $postService;
     }
 
-    public function index()
+    /**
+     * @param int $quantityPost
+     * @return \Exception|\Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     *
+     */
+    public function index(int $quantityPost = 12)
     {
-        $posts = $this->blogService->getPaginate(12);
-
-        return view('pages.blog.index', [
-            'posts' => $posts
-        ]);
+        try {
+            $posts = $this->postService->getPaginate($quantityPost);
+            return view('pages.blog.index', [
+                'posts' => $posts
+            ]);
+        }catch (\Exception $exception) {
+            return  $exception;
+        }
     }
 
+    /**
+     * @param $slug
+     * @return \Exception|\Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     *
+     */
     public function show($slug)
     {
-        $post = $this->blogService->getBySlug($slug);
-
-        return view('pages.blog.show', [
-            'post' => $post,
-
-        ]);
+        try {
+            $post = $this->postService->getBySlug($slug);
+            return view('pages.blog.show', [
+                'post' => $post,
+            ]);
+        }catch (\Exception $exception) {
+            return  $exception;
+        }
     }
-
 
 }
