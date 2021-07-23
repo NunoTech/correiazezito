@@ -14,8 +14,9 @@ class PostsStoreRequest extends FormRequest
      */
     public function authorize()
     {
-        if(Auth::check()) return true;
-        return false;
+        return true;
+//        if(Auth::check()) return true;
+//        return false;
     }
 
     /**

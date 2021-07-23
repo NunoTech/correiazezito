@@ -26,7 +26,9 @@
         @foreach($posts as $post)
         <tr>
             <th scope="row">{{\Carbon\Carbon::parse($post->created_at)->format('d-m-y H:i')}}</th>
-            <td>{{$post->title}}</td>
+            <td>{{$post->title}}
+                <p></p><small>Publicado por: {{$post->user->name}}</small></td>
+            </td>
             <td>Otto</td>
             <td>
                 <div class="btn-group" role="group" aria-label="Basic example">

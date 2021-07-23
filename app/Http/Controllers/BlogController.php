@@ -10,7 +10,6 @@ class BlogController extends Controller
 {
     private $postService;
 
-
     public function __construct(PostServiceInterface $postService)
     {
         $this->postService = $postService;

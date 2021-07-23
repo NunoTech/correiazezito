@@ -30,7 +30,6 @@ class ImgFactory extends Factory
 
         return [
             'path' =>Str::after($pathFile, 'storage/app/public/'),
-//            'post_id' => Post::factory()->create()->id,
         ];
     }
 }

@@ -245,6 +245,29 @@ return [
             'route'  => 'posts.create',
             'icon' => 'fas fa-fw fa-user',
         ],
+        ['header' => 'Usuários'],
+        [
+            'text' => 'Cadastrar',
+            'route'  => 'user.create',
+            'icon' => 'fa fa-users',
+            'label' => 'Novo'
+        ],
+
+        ['header' => 'Servidor'],
+        [
+            'text' => 'Listar',
+            'url'  => '#',
+            'icon' => 'fa fa-server',
+            'label' => 'Em breve'
+        ],
+        ['header' => 'Financeiro'],
+        [
+            'text' => 'Detalhes',
+            'url'  => '#',
+            'icon' => 'fa fa-credit-card',
+            'label' => 'Em breve'
+        ],
+
 
 //        ['header' => 'labels'],
 //        [

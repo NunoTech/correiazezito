@@ -8,8 +8,8 @@ use App\Repositories\Movies\MovieRepository;
 use App\Repositories\Movies\MovieRepositoryInterface;
 use App\Repositories\Posts\PostRepository;
 use App\Repositories\Posts\PostRepositoryInterface;
-use App\Services\Movies\MoviesService;
-use App\Services\Movies\MoviesServiceInterface;
+use App\Repositories\Users\UserRepository;
+use App\Repositories\Users\UserRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -24,6 +24,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(PostRepositoryInterface::class, PostRepository::class);
         $this->app->bind(FileRepositoryInterface::class, FileRepository::class);
         $this->app->bind(MovieRepositoryInterface::class, MovieRepository::class);
+        $this->app->bind(UserRepositoryInterface::class, UserRepository::class);
     }
 
     /**

@@ -5,7 +5,7 @@ namespace App\Services\Posts;
 
 
 use App\Models\Movie;
-use App\Repositories\Files\FileRepositoryInterface;
+use App\Repositories\Files\UserRepositoryInterface;
 use App\Repositories\Posts\PostRepositoryInterface;
 use App\Services\Caches\CacheService;
 use App\Services\Caches\CacheServiceInterface;
@@ -54,7 +54,6 @@ class PostService implements PostServiceInterface
 
     public function store($attributes)
     {
-        $attributes['slug'] = Str::slug($attributes['title']);
         $post = $this->postRepository->store($attributes);
         $this->fileService->save($post->id, $attributes['img']);
 
@@ -62,7 +61,8 @@ class PostService implements PostServiceInterface
              $this->movieService->save($post->id, $attributes['movie']);
         }
 
-       return $this->cacheService->removeCachePaginate();
+       $this->cacheService->removeCachePaginate();
+
     }
 
     public function update($post, $slug)
