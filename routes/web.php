@@ -1,8 +1,12 @@
 <?php
 
+
+use App\Http\Controllers\Admin\CepController;
 use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Admin\UploadsController;
+use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\BlogController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
@@ -27,11 +31,14 @@ Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
 //    Route::get('/', [PostsController::class, 'index'])->name('posts.index');
+    Route::get('/users/create', [UsersController::class, 'create'])->name('user.create');
+    Route::post('/users/create', [UsersController::class, 'store'])->name('user.store');
     Route::get('/posts', [PostsController::class, 'index'])->name('posts.index');
     Route::post('/posts', [PostsController::class, 'store'])->name('posts.store');
-    Route::get('/posts/publicar', [PostsController::class, 'create'])->name('posts.create');
+    Route::get('/posts/publicar', [PostsController::class, 'create'])->name('posts.create')->middleware('newUser');
     Route::get('/posts/editar/{slug}', [PostsController::class, 'edit'])->name('post.edit');
     Route::put('/posts/editar/{slug}', [PostsController::class, 'update'])->name('post.update');
+    Route::get('/cep/{cep}', [CepController::class, 'index'])->name('get.cep');
 
     //Requisicao filepond upload
     Route::post('upload', [UploadsController::class, 'upload']);
@@ -44,5 +51,5 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
 //    Route::resource('/admin/departamento/', 'Admin\Site\DepartamentsController');
 
 });
-Auth::routes();
+Auth::routes(['register' => false]);
 

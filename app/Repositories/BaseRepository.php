@@ -63,7 +63,7 @@ class BaseRepository
 
     public function destroy($id)
     {
-        $model = $this->model->find($id);
+        $model = $this->model->where('id', '!=', $id);
 
         if(!$model){
             throw new ModelNotFoundException();

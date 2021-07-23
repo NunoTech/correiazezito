@@ -29,9 +29,7 @@ class PostsController extends Controller
     public function index()
     {
         try {
-
             $posts = $this->postService->getPaginate(15);
-
             return view('pages.admin.posts.index', [
                 'posts' => $posts
             ]);
@@ -61,9 +59,11 @@ class PostsController extends Controller
      */
     public function store(PostsStoreRequest $request)
     {
+
         $post = $request->validated();
+
         try {
-            $this->postService->store($post);
+            return $this->postService->store($post);
 
         } catch (\Exception $exception) {
             return $exception;

@@ -2,14 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e262c284-e617-4b3d-8b2e-01ac9b0ab860" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9d0003f8-71e0-442b-8fb9-b0c35fb29604.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9d0003f8-71e0-442b-8fb9-b0c35fb29604/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/posts/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/posts/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/blog/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/blog/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/site/_partials/services.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/site/_partials/services.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Ambos_old/ContactsController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Ambos_old/DashboardController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Ambos_old/MessagesController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Blog/PostsController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PostsStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PostsStoreRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/ServicesServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/ServicesServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/BaseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/BaseRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Posts/PostService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Posts/PostService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminlte.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ImgFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ImgFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/PostFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/PostFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/ImgTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/PostsTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/painel/js/filepond.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/painel/js/filepond.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/admin/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/admin/posts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/26/95/2695d7369fbe1bb98ed5f8d66f25cdc7f9bfb573" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/49/56/4956b1111162b3b8e24ecdc925cf55045b2cd8f0" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/49/56/4956b1111162b3b8e24ecdc925cf55045b2cd8f0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/a7/35/a7352364bd9ceb33dcc0c2b2a95bedf7da3e76bb" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/a7/35/a7352364bd9ceb33dcc0c2b2a95bedf7da3e76bb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/a7/35/a7352364bd9ceb33dcc0c2b2a95bedf7da3e76bb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/b6/34/b6344dd75d1bfe71c7c42bbe62fe64976832896c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/cc/7d/cc7d67d9701952fd9f8b0e7aedd5e452277d7a5f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/PostTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/PostTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,11 +75,11 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/.env" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/Services/Posts/PostService.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/Http/Requests/PostsStoreRequest.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/PostsController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.env" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -188,11 +224,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mysql&#10;mariadb" />
+    <property name="DatabaseDriversLRU" value="mariadb&#10;mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Services/Posts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../curso" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -206,18 +242,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu-20.04\home\nunofranca\correiazezito\app\Repositories" />
+      <recent name="\\wsl$\Ubuntu-20.04\home\nunofranca\correiazezito\resources\views\pages\admin\users" />
+      <recent name="\\wsl$\Ubuntu-20.04\home\nunofranca\correiazezito\app\Services\Users" />
       <recent name="\\wsl$\Ubuntu\home\nuno\correiazezito\app\Services\Posts" />
       <recent name="\\wsl$\Ubuntu\home\nuno\correiazezito\resources\views\pages\admin\posts" />
-      <recent name="\\wsl$\Ubuntu\home\nuno\correiazezito" />
-      <recent name="\\wsl$\Ubuntu-20.04\home\nuno\correia\resources\views\pages\admin\posts" />
-      <recent name="\\wsl$\Ubuntu-20.04\home\nuno\correia\app\Services\Posts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu-20.04\home\nunofranca\correiazezito\app\Models" />
+      <recent name="\\wsl$\Ubuntu-20.04\home\nunofranca\correiazezito\resources\views\pages\admin" />
       <recent name="C:\Users\Nuno Franca\Documents\projetos\correia\app" />
       <recent name="C:\Users\Nuno\Documents\projetos\correia\resources\views\pages\_partials" />
       <recent name="C:\Users\Nuno\Documents\projetos\correia\resources\views\pages\blog\master" />
-      <recent name="C:\Users\Nuno\Documents\projetos\correia\storage\app" />
-      <recent name="C:\Users\Nuno\Documents\projetos\correia\app" />
     </key>
   </component>
   <component name="RunManager">
@@ -285,6 +321,13 @@
       <workItem from="1624926199439" duration="8582000" />
       <workItem from="1625065194774" duration="5588000" />
       <workItem from="1625100807221" duration="12609000" />
+      <workItem from="1626710012820" duration="1430000" />
+      <workItem from="1626737661094" duration="22211000" />
+      <workItem from="1626827527837" duration="8042000" />
+      <workItem from="1626889327562" duration="657000" />
+      <workItem from="1626895890024" duration="633000" />
+      <workItem from="1626910862111" duration="9451000" />
+      <workItem from="1626944083591" duration="8373000" />
     </task>
     <servers />
   </component>
